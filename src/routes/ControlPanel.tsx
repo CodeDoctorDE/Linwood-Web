@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Link } from '@material-ui/core';
+import { Button, Link, Paper } from '@material-ui/core';
 
 
 class ControlPanel extends Component {
@@ -7,6 +7,9 @@ class ControlPanel extends Component {
     render() {
         return (
             <div>
+                <Paper>
+                    <h1>Test</h1>
+                </Paper>
             <Button variant="contained" color="primary">
               Hello World
             </Button>
