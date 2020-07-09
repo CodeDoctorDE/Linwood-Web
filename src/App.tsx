@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ControlPanel from './routes/ControlPanel';
+import ControlPanel from './routes/cp/ControlPanel';
 import {
   BrowserRouter as Router,
   Switch,
