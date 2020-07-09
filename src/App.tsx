@@ -7,6 +7,7 @@ import {
   Route} from "react-router-dom";
 import HomePage from './routes/Home';
 import config from './config.json';
+import KarmaControlPanel from './routes/cp/KarmaControlPanel';
 
 
 function About() {
@@ -30,8 +31,11 @@ function App() {
           <Route path="/users">
             <Users />
           </Route>
+          <Route path="/cp/karma">
+            <KarmaControlPanel />
+          </Route>
           <Route path="/cp">
-            <ControlPanel />
+            <ControlPanel/>
           </Route>
   <Route path="/login" render={() => (window.location.href = `https://discord.com/oauth2/authorize?client_id=${config['clientid']}&response_type=code&scope=identify&redirect_uri=${encodeURIComponent(config["url"] + '/callback')}`)} />
           <Route path="/">

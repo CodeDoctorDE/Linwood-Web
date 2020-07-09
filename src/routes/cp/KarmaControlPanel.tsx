@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Card, CardContent, CardActions, Button, CardHeader, GridList, Grid } from '@material-ui/core';
+import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Card, CardContent, CardActions, Button, CardHeader, GridList, Grid, LinearProgress } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ControlPanelNavbar from '../../components/ControlPanelNavbar';
 
@@ -70,7 +70,7 @@ export default (props: Props) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        User Control Panel
+                        Karma
                 </Typography>
                 </Toolbar>
             </AppBar>
@@ -89,7 +89,7 @@ export default (props: Props) => {
                         ModalProps={{
                             keepMounted: true, // Better open performance on mobile.
                         }}>
-                        <ControlPanelNavbar page="home" />
+                        <ControlPanelNavbar page="karma" />
                     </Drawer>
                 </Hidden>
                 <Hidden xsDown implementation="css">
@@ -100,7 +100,7 @@ export default (props: Props) => {
                         variant="permanent"
                         open
                     >
-                        <ControlPanelNavbar page="home" />
+                        <ControlPanelNavbar page="karma" />
                     </Drawer>
                 </Hidden>
             </nav>
@@ -112,8 +112,10 @@ export default (props: Props) => {
                             <CardHeader title="Welcome CodeDoctor" />
                             <CardContent>
                                 <Typography color="textSecondary">
-                                    Here you can find everything what you need!
+                                    Here you can aef everything what you need!
                         </Typography>
+                        <LinearProgress variant="determinate" value={50} />
+
                             </CardContent>
                         </Card>
                     </Grid>
