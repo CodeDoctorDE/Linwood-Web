@@ -1,0 +1,16 @@
+{
+    "change": "Change server",
+    "user": {
+        "title": "User section",
+        "home": "Home",
+        "karma": "Karma",
+        "stats": "Statistics",
+        "user": "User Settings"
+    },
+    "admin": {
+        "title": "Admin section",
+        "dashboard": "Dashboard",
+        "game": "Game settings",
+        "settings": "Admin settings"
+    }
+}

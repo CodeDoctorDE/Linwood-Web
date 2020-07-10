@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player'
 import Footer from '../components/Footer';
 import { Link as RouterLink } from 'react-router-dom';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import {useTranslation} from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
     
@@ -40,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 export default function HomePage() {
+  const [t, i18n] = useTranslation('index');
     const classes = useStyles();
     return (
       <React.Fragment>
@@ -69,7 +71,7 @@ export default function HomePage() {
               <Grid container spacing={2} justify="center">
                 <Grid item>
                   <Button variant="contained" color="primary" component={RouterLink} to="/login">
-                    View web interface
+                    {t("webinterface")}
                   </Button>
                 </Grid>
                 <Grid item>

@@ -13,6 +13,7 @@ interface Props {
 }
 
 export default (props: Props) => {
+    const [t, i18n] = useTranslation('ucp');
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -21,7 +22,6 @@ export default (props: Props) => {
     const container = window !== undefined ? () => window().document.body : undefined;
     const theme = useTheme();
     const drawerWidth = 240;
-    const [t, i18n] = useTranslation('ucp');
     const useStyles = makeStyles(() =>
         createStyles({
             root: {
@@ -72,7 +72,7 @@ export default (props: Props) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        {t('user.title')}
+                        {t('stats.title')}
                 </Typography>
                 </Toolbar>
             </AppBar>
@@ -91,7 +91,7 @@ export default (props: Props) => {
                         ModalProps={{
                             keepMounted: true, // Better open performance on mobile.
                         }}>
-                        <ControlPanelNavbar page="home" />
+                        <ControlPanelNavbar page="stats" />
                     </Drawer>
                 </Hidden>
                 <Hidden xsDown implementation="css">
@@ -102,7 +102,7 @@ export default (props: Props) => {
                         variant="permanent"
                         open
                     >
-                        <ControlPanelNavbar page="home" />
+                        <ControlPanelNavbar page="stats" />
                     </Drawer>
                 </Hidden>
             </nav>
@@ -111,41 +111,41 @@ export default (props: Props) => {
                 <Grid container spacing={5}>
                     <Grid item xs={12}>
                         <Card>
-                            <CardHeader title={t('home.welcome.title')} />
+                            <CardHeader title="Welcome CodeDoctor" />
                             <CardContent>
                                 <Typography color="textSecondary">
-                                {t('home.welcome.content')}
+                                    Here you can find everything what you need!
                         </Typography>
                             </CardContent>
                         </Card>
                     </Grid>
                     <Grid item xs={12}>
                         <Card>
-                            <CardHeader title={t('home.web.title')} />
+                            <CardHeader title="Web Repository" />
                             <CardContent>
                                 <Typography color="textSecondary">
-                                {t('home.web.content')}
+                                    It will be cool if you can give me feedback! A star on github helps me too!
                         </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button color="secondary">{t('home.web.actions.bug-report')}</Button>
-                                <Button color="secondary">{t('home.web.actions.feature-request')}</Button>
-                                <Button color="secondary">{t('home.web.actions.star')}</Button>
+                                <Button>Bug report</Button>
+                                <Button>Feature request</Button>
+                                <Button>Star</Button>
                             </CardActions>
                         </Card>
                     </Grid>
                     <Grid item xs={12}>
                         <Card>
-                            <CardHeader title={t('home.bot.title')} />
+                            <CardHeader title="Bot Repository" />
                             <CardContent>
                                 <Typography color="textSecondary">
-                                {t('home.bot.content')}
+                                    It will be cool if you can give me feedback! A star on github helps me too!
                         </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button color="secondary">{t('home.bot.actions.bug-report')}</Button>
-                                <Button color="secondary">{t('home.bot.actions.feature-request')}</Button>
-                                <Button color="secondary">{t('home.bot.actions.star')}</Button>
+                                <Button>Bug report</Button>
+                                <Button>Feature request</Button>
+                                <Button>Star</Button>
                             </CardActions>
                         </Card>
                     </Grid>

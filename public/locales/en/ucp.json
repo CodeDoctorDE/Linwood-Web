@@ -1,0 +1,52 @@
+ {
+     "user":{
+         "title":"User Settings",
+         "general":{
+             "title":"General",
+             "language":{
+                 "title":"Language",
+                 "helper":"Create an pull request to add your language"
+             }
+         }
+     },
+     "home":{
+         "title":"User Control Panel",
+         "welcome":{
+             "title": "Welcome CodeDoctor",
+             "content":"Here you can find everything what you need!"
+         },
+         "web":{
+             "title":"Web Repository",
+             "content":"It will be cool if you give feedback! A star on github helps me too!",
+             "actions":{
+                 "bug-report":"Bug report",
+                 "feature-request":"Feature request",
+                 "star":"Star"
+             }
+         },
+         "bot":{
+             "title":"Bot Repository",
+             "content":"It will be cool if you give feedback! A star on github helps me too!",
+             "actions":{
+                 "bug-report":"Bug report",
+                 "feature-request":"Feature request",
+                 "star":"Star"
+             }
+         }
+     },
+     "karma":{
+         "title":"Karma",
+         "user": "Your karma",
+         "leaderboard":{
+             "title":"Leaderboard",
+             "rank":"Rank",
+             "name":"Name",
+             "xp":"Experience",
+             "rowsperpage":{
+                 "display":"{{from}}-{{to}} of total {{count}}",
+                 "title": "Rows per page",
+                 "all": "All"
+             }
+         }
+     }
+ }

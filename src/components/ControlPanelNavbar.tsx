@@ -8,6 +8,7 @@ import TuneOutlinedIcon from '@material-ui/icons/TuneOutlined';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
 import SportsEsportsOutlinedIcon from '@material-ui/icons/SportsEsportsOutlined';
 import { Link as RouterLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -32,6 +33,7 @@ interface Props {
 }
 export default (props: Props) => {
   const classes = useStyles();
+  const [t, i18n] = useTranslation('navbar');
   return (
     <div>
       <Grid container justify="center">
@@ -41,40 +43,40 @@ export default (props: Props) => {
           <Typography variant="h6">Test</Typography>
         </Toolbar>
         </Grid>
-        <Button variant="contained" className={classes.changeButton}>Change server</Button>
+        <Button variant="outlined" color="primary" className={classes.changeButton} component={RouterLink} to="/servers">{t('change')}</Button>
       </Grid>
       <Divider />
-      <List subheader={<ListSubheader>User Section</ListSubheader>} className={classes.root}>
+      <List subheader={<ListSubheader>{t('user.title')}</ListSubheader>} className={classes.root}>
         <ListItem selected={props.page === 'home'} button component={RouterLink} to="/cp">
           <ListItemIcon><HomeOutlinedIcon /></ListItemIcon>
-          <ListItemText>Home</ListItemText>
+          <ListItemText>{t('user.home')}</ListItemText>
         </ListItem>
         <ListItem selected={props.page === 'karma'} button component={RouterLink} to="/cp/karma">
           <ListItemIcon><FavoriteBorderOutlinedIcon /></ListItemIcon>
-          <ListItemText>Karma</ListItemText>
+          <ListItemText>{t('user.karma')}</ListItemText>
         </ListItem>
-        <ListItem selected={props.page === 'stats'} button component={RouterLink} to="/cp/statistics">
+        <ListItem selected={props.page === 'stats'} button component={RouterLink} to="/cp/stats">
           <ListItemIcon><ShowChartOutlinedIcon /></ListItemIcon>
           <ListItemText>Statistics</ListItemText>
         </ListItem>
         <ListItem selected={props.page === 'user'} button component={RouterLink} to="/cp/user">
           <ListItemIcon><TuneOutlinedIcon /></ListItemIcon>
-          <ListItemText>User Settings</ListItemText>
+          <ListItemText>{t('user.user')}</ListItemText>
         </ListItem>
       </List>
       <Divider />
-      <List subheader={<ListSubheader>Admin Section</ListSubheader>} className={classes.root}>
+      <List subheader={<ListSubheader>{t('admin.title')}</ListSubheader>} className={classes.root}>
         <ListItem disabled={!props.admin} selected={props.page === 'dashboard'} button component={RouterLink} to="/cp/dashboard">
           <ListItemIcon><DashboardOutlinedIcon /></ListItemIcon>
-          <ListItemText>Dashboard</ListItemText>
+          <ListItemText>{t('admin.dashboard')}</ListItemText>
         </ListItem>
         <ListItem disabled={!props.admin} selected={props.page === 'game'} button component={RouterLink} to="/cp/game">
           <ListItemIcon><SportsEsportsOutlinedIcon /></ListItemIcon>
-          <ListItemText>Game Settings</ListItemText>
+          <ListItemText>{t('admin.game')}</ListItemText>
         </ListItem>
         <ListItem disabled={!props.admin} selected={props.page === 'admin'} button component={RouterLink} to="/cp/admin">
           <ListItemIcon><SettingsOutlinedIcon /></ListItemIcon>
-          <ListItemText>Admin Settings</ListItemText>
+          <ListItemText>{t('admin.settings')}</ListItemText>
         </ListItem>
       </List>
     </div>
