@@ -6,23 +6,16 @@ import WifiIcon from '@material-ui/icons/Wifi';
 import BluetoothIcon from '@material-ui/icons/Bluetooth';
 import TranslateOutlinedIcon from '@material-ui/icons/TranslateOutlined';
 import { useTranslation } from 'react-i18next';
+import { isDarkMode } from '../../Theme';
 
-interface Props {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window?: () => Window;
-}
 
-export default (props: Props) => {
+export default () => {
     const [t, i18n] = useTranslation('ucp');
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
-    const { window } = props;
-    const container = window !== undefined ? () => window().document.body : undefined;
+    const container = window.document.body;
     const theme = useTheme();
     const drawerWidth = 240;
     const useStyles = makeStyles(() =>
@@ -75,21 +68,16 @@ export default (props: Props) => {
         })
     );
     const classes = useStyles();
-    const [checked, setChecked] = React.useState(['wifi']);
+    const [darkMode, setDarkMode] = React.useState(isDarkMode());
 
-    const handleToggle = (value: string) => () => {
-        const currentIndex = checked.indexOf(value);
-        const newChecked = [...checked];
+    const toggleDarkMode = () => {
+        window.localStorage.setItem("mode", isDarkMode()? "light":"dark");
+        console.log(isDarkMode());
+        setDarkMode(isDarkMode());
+        window.location.reload();
 
-        if (currentIndex === -1) {
-            newChecked.push(value);
-        } else {
-            newChecked.splice(currentIndex, 1);
-        }
-
-        setChecked(newChecked);
-    };
-    const [language, setLanguage] = React.useState('en');
+    }
+    const [language, setLanguage] = React.useState(i18n.language);
 
     const handleLanguageChange = (event: React.ChangeEvent<{ value: unknown }>) => {
         setLanguage(event.target.value as string);
@@ -172,12 +160,12 @@ export default (props: Props) => {
                             <ListItemIcon>
                                 <BluetoothIcon />
                             </ListItemIcon>
-                            <ListItemText id="switch-list-label-bluetooth" primary="Bluetooth" />
+                            <ListItemText id="switch-list-label-bluetooth" primary="Dark Mode" />
                             <ListItemSecondaryAction>
                                 <Switch
                                     edge="end"
-                                    onChange={handleToggle('bluetooth')}
-                                    checked={checked.indexOf('bluetooth') !== -1}
+                                    onChange={() => toggleDarkMode()}
+                                    checked={darkMode}
                                     inputProps={{ 'aria-labelledby': 'switch-list-label-bluetooth' }}
                                 />
                             </ListItemSecondaryAction>
