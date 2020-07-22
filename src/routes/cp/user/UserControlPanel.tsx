@@ -1,12 +1,11 @@
 import React from 'react';
 import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Paper, List, ListSubheader, ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction, Switch, FormControl, Select, MenuItem, FormHelperText } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ControlPanelNavbar from '../../components/ControlPanelNavbar';
-import WifiIcon from '@material-ui/icons/Wifi';
+import ControlPanelNavbar from '../../../components/ControlPanelNavbar';
 import BluetoothIcon from '@material-ui/icons/Bluetooth';
 import TranslateOutlinedIcon from '@material-ui/icons/TranslateOutlined';
 import { useTranslation } from 'react-i18next';
-import { isDarkMode } from '../../Theme';
+import { isDarkMode } from '../../../Theme';
 
 
 export default () => {
@@ -17,7 +16,7 @@ export default () => {
     };
     const container = window.document.body;
     const theme = useTheme();
-    const drawerWidth = 240;
+    const drawerWidth = 250;
     const useStyles = makeStyles(() =>
         createStyles({
             root: {

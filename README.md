@@ -16,4 +16,10 @@ This webinterface isn't only for the admin. As user you can check your own karma
 
 You have all options like in the discord. You can configure the game, the general language/prefix and more...
 
+
+## Theme
+
+The primary color is: `#317731`
+The secondary color is: `#fa0`
+
 *This project is in developing!*

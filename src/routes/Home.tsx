@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 export default function HomePage() {
-  const [t, i18n] = useTranslation('index');
+  const [t] = useTranslation('index');
     const classes = useStyles();
     return (
       <React.Fragment>

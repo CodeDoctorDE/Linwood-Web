@@ -1,12 +1,12 @@
 import React from 'react';
 import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Grid, Table, TableHead, TableContainer, Paper, TableRow, TableCell, TableBody, TablePagination, TableFooter, Theme, Collapse, Box } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ControlPanelNavbar from '../../components/ControlPanelNavbar';
+import ControlPanelNavbar from '../../../components/ControlPanelNavbar';
 import FirstPageIcon from '@material-ui/icons/FirstPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
-import Karma from '../../components/Karma';
+import Karma from '../../../components/Karma';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { useTranslation } from 'react-i18next';
@@ -84,7 +84,6 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
     const classes = useStyles();
     const theme = useTheme();
     const { count, page, rowsPerPage, onChangePage } = props;
-    const [t, i18n] = useTranslation('ucp');
 
     const handleFirstPageButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         onChangePage(event, 0);
@@ -132,14 +131,14 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
     );
 }
 export default (props: Props) => {
-    const [t, i18n] = useTranslation('ucp');
+    const [t] = useTranslation('ucp');
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
     const { window } = props;
     const container = window !== undefined ? () => window().document.body : undefined;
-    const drawerWidth = 240;
+    const drawerWidth = 250;
     const theme = useTheme();
 
     const rows = [

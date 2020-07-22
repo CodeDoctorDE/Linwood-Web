@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import './App.css';
-import ControlPanel from './routes/cp/ControlPanel';
+import ControlPanel from './routes/cp/user/ControlPanel';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,10 +9,12 @@ import {
 } from "react-router-dom";
 import HomePage from './routes/Home';
 import config from './config.json';
-import KarmaControlPanel from './routes/cp/KarmaControlPanel';
-import StatsControlPanel from './routes/cp/StatsControlPanel';
-import UserControlPanel from './routes/cp/UserControlPanel';
+import KarmaControlPanel from './routes/cp/user/KarmaControlPanel';
+import StatsControlPanel from './routes/cp/user/StatsControlPanel';
+import UserControlPanel from './routes/cp/user/UserControlPanel';
+import DashboardControlPanel from './routes/cp/admin/DashboardControlPanel';
 import logo from './logo.svg';
+import AdminControlPanel from './routes/cp/admin/AdminControlPanel';
 
 
 function About() {
@@ -53,6 +55,12 @@ function App() {
           </Route>
           <Route path="/cp/user">
             <UserControlPanel />
+          </Route>
+          <Route path="/cp/dashboard">
+            <DashboardControlPanel />
+          </Route>
+          <Route path="/cp/admin">
+            <AdminControlPanel />
           </Route>
           <Route path="/cp">
             <ControlPanel />

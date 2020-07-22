@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from '@material-ui/core';
 import theme from './Theme';
 import i18next from 'i18next';
-import { I18nextProvider, initReactI18next } from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 

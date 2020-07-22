@@ -1,27 +1,19 @@
 import React from 'react';
 import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Card, CardContent, CardActions, Button, CardHeader, Grid } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ControlPanelNavbar from '../../components/ControlPanelNavbar';
+import ControlPanelNavbar from '../../../components/ControlPanelNavbar';
 import { useTranslation } from 'react-i18next';
 
-interface Props {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window?: () => Window;
-}
 
-export default (props: Props) => {
-    const [t, i18n] = useTranslation('ucp');
+export default () => {
+    const [t] = useTranslation('ucp');
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
-    const { window } = props;
-    const container = window !== undefined ? () => window().document.body : undefined;
+    const container = window !== undefined ? () => window.document.body : undefined;
     const theme = useTheme();
-    const drawerWidth = 240;
+    const drawerWidth = 250;
     const useStyles = makeStyles(() =>
         createStyles({
             root: {

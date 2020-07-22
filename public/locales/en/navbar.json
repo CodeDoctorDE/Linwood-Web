@@ -10,7 +10,6 @@
     "admin": {
         "title": "Admin section",
         "dashboard": "Dashboard",
-        "game": "Game settings",
         "settings": "Admin settings"
     }
 }
