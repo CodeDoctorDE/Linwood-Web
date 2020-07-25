@@ -3,7 +3,7 @@ import { Typography, makeStyles, Link, Button } from '@material-ui/core';
 import getConfig from 'next/config'
 
 // Only holds serverRuntimeConfig and publicRuntimeConfig
-const { impress } = getConfig()
+const { publicRuntimeConfig } = getConfig()
 
 export interface Config {
     impress: string;
@@ -39,7 +39,7 @@ function Copyright() {
             {new Date().getFullYear()}
             {'.'}
             <br />
-            <Button target="_blank" href={impress}>Impress</Button>
+            <Button target="_blank" href={publicRuntimeConfig.impress}>Impress</Button>
 
         </Typography>
     );
