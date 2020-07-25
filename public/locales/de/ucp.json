@@ -1,0 +1,52 @@
+ {
+     "user":{
+         "title":"Benutzereinstellungen",
+         "general":{
+             "title":"Generell",
+             "language":{
+                 "title":"Sprache",
+                 "helper":"Erstelle ein Pull Request um deine Sprache hinzuzufügen"
+             }
+         }
+     },
+     "home":{
+         "title":"Benutzersteuerung",
+         "welcome":{
+             "title": "Willkommen CodeDoctor",
+             "content":"Hier findest du alles was du brauchst!"
+         },
+         "web":{
+             "title":"Web Repository",
+             "content":"Es wird cool sein, wenn Sie Feedback geben! Ein Stern auf Github hilft mir auch!",
+             "actions":{
+                 "bug-report":"Fehlerbericht",
+                 "feature-request":"Featureanfrage",
+                 "star":"Stern geben"
+             }
+         },
+         "bot":{
+            "title":"Bot Repository",
+            "content":"Es wird cool sein, wenn Sie Feedback geben! Ein Stern auf Github hilft mir auch!",
+            "actions":{
+                "bug-report":"Fehlerbericht",
+                "feature-request":"Featureanfrage",
+                "star":"Stern geben"
+            }
+         }
+     },
+     "karma":{
+         "title":"Karma",
+         "user": "Dein Karma",
+         "leaderboard":{
+             "title":"Bestenliste",
+             "rank":"Rang",
+             "name":"Name",
+             "xp":"Erfahrung",
+             "rowsperpage":{
+                 "display":"{{from}}-{{to}} von insgesamt {{count}}",
+                 "title": "Einträge pro Seite",
+                 "all": "Alle"
+             }
+         }
+     }
+ }

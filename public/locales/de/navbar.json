@@ -1,0 +1,15 @@
+{
+    "change": "Server wechseln",
+    "user": {
+        "title": "Benutzerbereich",
+        "home": "Home",
+        "karma": "Karma",
+        "stats": "Statistiken",
+        "user": "Benutzereinstellungen"
+    },
+    "admin": {
+        "title": "Adminbereich",
+        "dashboard": "Dashboard",
+        "settings": "Admineinstellungen"
+    }
+}
