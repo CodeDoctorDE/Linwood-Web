@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Card, CardContent, CardActions, Button, CardHeader, Grid } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ControlPanelNavbar from '../../../components/ControlPanelNavbar';
+import ControlPanelNavbar from '../../components/ControlPanelNavbar';
 import { useTranslation } from 'react-i18next';
 
 

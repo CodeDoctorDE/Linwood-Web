@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Paper, Tabs, Tab, ListItem, List, ListItemIcon, ListItemText, ListItemSecondaryAction, FormControl, Select, MenuItem, FormHelperText, ListSubheader, InputBase, Divider, TextField } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ControlPanelNavbar from '../../../components/ControlPanelNavbar';
+import ControlPanelNavbar from '../../components/ControlPanelNavbar';
 import { useTranslation } from 'react-i18next';
 import SwipeableViews from 'react-swipeable-views';
 import Box from '@material-ui/core/Box';

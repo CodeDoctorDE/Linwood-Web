@@ -1,11 +1,11 @@
 import React from 'react';
 import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Paper, List, ListSubheader, ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction, Switch, FormControl, Select, MenuItem, FormHelperText } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import ControlPanelNavbar from '../../../components/ControlPanelNavbar';
+import ControlPanelNavbar from '../../components/ControlPanelNavbar';
 import BluetoothIcon from '@material-ui/icons/Bluetooth';
 import TranslateOutlinedIcon from '@material-ui/icons/TranslateOutlined';
 import { useTranslation } from 'react-i18next';
-import { isDarkMode } from '../../../components/Theme';
+import { isDarkMode } from '../../src/theme';
 
 
 export default () => {

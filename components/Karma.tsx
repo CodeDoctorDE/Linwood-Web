@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography, LinearProgress, makeStyles, createStyles, useTheme } from '../pages/cp/user/node_modules/@material-ui/core'
+import { Grid, Typography, LinearProgress, makeStyles, createStyles, useTheme } from '@material-ui/core'
 
 interface Props {
     xp: number,

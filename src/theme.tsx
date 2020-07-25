@@ -1,4 +1,4 @@
-
+import { createMuiTheme } from "@material-ui/core";
 
 const theme = createMuiTheme({
     palette: {
@@ -7,8 +7,7 @@ const theme = createMuiTheme({
         },
         secondary: {
             main: "#fa0"
-        },
-        type: (isDarkMode())?'dark':'light'
+        }
     }
 });
 export function isDarkMode():boolean {

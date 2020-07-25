@@ -3,9 +3,7 @@ import { Button, makeStyles, CssBaseline, AppBar, Toolbar, Typography, Container
 import ReactPlayer from 'react-player'
 import Footer from '../components/Footer';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import {useTranslation} from "react-i18next";
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import { withTranslation } from '../i18n'
 
 const useStyles = makeStyles((theme) => ({
     
@@ -40,12 +38,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(6),
   },
   }));
-
-export default function HomePage() {
-  const [t] = useTranslation('index');
+const HomePage = ({t}: {t:any}) => {
     const classes = useStyles();
     return (
-      <Layout title="Home | Next.js + TypeScript Example">
+      <React.Fragment>
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
@@ -86,6 +82,11 @@ export default function HomePage() {
         </div>
       </main>
       <Footer />
-      </Layout>
+      </React.Fragment>
     );
 }
+HomePage.getInitialProps = async () => ({
+  namespacesRequired: ['home'],
+})
+
+export default withTranslation('home')(HomePage);
