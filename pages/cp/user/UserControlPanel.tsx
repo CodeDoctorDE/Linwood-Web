@@ -5,7 +5,7 @@ import ControlPanelNavbar from '../../../components/ControlPanelNavbar';
 import BluetoothIcon from '@material-ui/icons/Bluetooth';
 import TranslateOutlinedIcon from '@material-ui/icons/TranslateOutlined';
 import { useTranslation } from 'react-i18next';
-import { isDarkMode } from '../../../Theme';
+import { isDarkMode } from '../../../components/Theme';
 
 
 export default () => {

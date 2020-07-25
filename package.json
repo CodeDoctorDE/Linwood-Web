@@ -8,6 +8,10 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@types/react-swipeable-views": "^0.13.0",
     "next": "latest",
     "next-i18next": "^4.5.0",
     "react": "^16.13.1",
