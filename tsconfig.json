@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "alwaysStrict": false,
+    "alwaysStrict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -15,9 +15,9 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "target": "esnext"
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "pages/_app.jsx", "pages/_app.jsx", "pages/_app.js", "pages/_document.jsx"]
+  "include": ["**/*.ts", "**/*.tsx", "pages/_app.jsx", "pages/_app.jsx", "pages/_app.js", "pages/_document.jsx", "pages/modules/editor.jsx", "next-env.d.ts"]
 }

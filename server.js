@@ -17,6 +17,9 @@ const handle = app.getRequestHandler();
 
   server.get('*', (req, res) => handle(req, res))
 
-  await server.listen(port)
-  console.log(`> Ready on http://localhost:${port}`) // eslint-disable-line no-console
+  server.listen(port, (err) => {
+    if (err)
+      throw err
+    console.log(`> Ready on http://localhost:${port}`)
+  });
 })()

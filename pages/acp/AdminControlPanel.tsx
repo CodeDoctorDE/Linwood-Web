@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Paper, Tabs, Tab, ListItem, List, ListItemIcon, ListItemText, ListItemSecondaryAction, FormControl, Select, MenuItem, FormHelperText, ListSubheader, InputBase, Divider, TextField } from '@material-ui/core';
+import { createStyles, makeStyles, IconButton, Toolbar, AppBar, CssBaseline, useTheme, Hidden, Drawer, Typography, Paper, Tabs, Tab, ListItem, List, ListItemIcon, ListItemText, ListItemSecondaryAction, FormControl, Select, MenuItem, FormHelperText, ListSubheader, Divider, TextField } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ControlPanelNavbar from '../../components/ControlPanelNavbar';
 import { useTranslation } from 'react-i18next';
@@ -122,7 +122,7 @@ export default () => {
         setValue(index);
     };
 
-    const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+    const handleChange = (_event: React.ChangeEvent<{}>, newValue: number) => {
         setValue(newValue);
     };
     const handleLanguageChange = (event: React.ChangeEvent<{ value: unknown }>) => {

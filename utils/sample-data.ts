@@ -1,9 +1,11 @@
-import { User } from '../interfaces'
+import { Module, Guild } from '../interfaces'
 
-/** Dummy user data. */
-export const sampleUserData: User[] = [
-  { id: 101, name: 'Alice' },
-  { id: 102, name: 'Bob' },
-  { id: 103, name: 'Caroline' },
-  { id: 104, name: 'Dave' },
+export const sampleGuildData: Guild[] = [
+  {id: 1203, name: "Sample Module", description: "a nice guild"}
+]
+export const sampleModuleData: Module[] = [
+  { id: 101, name: 'Alice', description: "first module", author: sampleGuildData[0] },
+  { id: 102, name: 'Bob', description: "another module", author: sampleGuildData[0] },
+  { id: 103, name: 'Caroline', description: "3rd module", author: sampleGuildData[0] },
+  { id: 104, name: 'Dave', description: "nice module", author: sampleGuildData[0] },
 ]

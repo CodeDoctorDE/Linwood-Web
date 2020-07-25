@@ -4,7 +4,14 @@
 //
 // import User from 'path/to/interfaces';
 
-export type User = {
+export type Module = {
   id: number
   name: string
+  description: string
+  author: Guild
+}
+export type Guild = {
+  id: number
+  name: string
+  description: string
 }

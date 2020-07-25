@@ -4,7 +4,7 @@ import getConfig from 'next/config'
 // Only holds serverRuntimeConfig and publicRuntimeConfig
 const { publicRuntimeConfig } = getConfig()
 
-function RedirectPage({ ctx }) {
+function RedirectPage() {
   const router = useRouter()
   // Make sure we're in the browser
   if (typeof window !== 'undefined') {
